@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leatherback Turtle Campaign</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="slider.css">
+    <style>
+        body {
+
+            margin: 0;
+            padding: 0;
+        }
+
+        .part1 {
+            justify-content: space-evenly;
+            align-self: auto;
+            display: flex;
+            background: url(pic/11.png);
+            background-size: cover;
+            align-items: center;
+            height: 950px;
+            width: 100%;
+        }
+
+        .timer {
+            font-family: "Roboto";
+            text-align: center;
+            color: #ffffff;
+            font-size: 5rem;
+            position: relative;
+            top: 250px;
+            left: 500px;
+        }
+
+
+        div.picslider {
+            justify-content: space-evenly;
+            align-self: auto;
+            display: flex;
+            align-items: center;
+            height: 950px;
+            background-color: black;
+        }
+
+        .text1 {
+            width: 1150px;
+            font-family: "Roboto";
+            text-align: center;
+            color: #ffffff;
+            font-size: 1.5rem;
+            position: relative;
+            right: 200px;
+            bottom: 200px;
+        }
+
+        .text3 {
+            width: 1150px;
+            font-family: "Roboto";
+            text-align: center;
+            color: #ffffff;
+            font-size: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .text1 .background {
+            background-color: #ff6961;
+            border-radius: 3.5rem;
+            width: 70%;
+        }
+
+        .text2 {
+            font-family: "Roboto";
+            text-align: center;
+            color: #474747;
+        }
+
+        .part2 {
+            display: flex;
+            position: relative;
+            justify-content: space-evenly;
+            align-self: center;
+            display: flex;
+            min-height: 950px;
+            max-height: auto;
+            width: 100%;
+            padding-top: 60px;
+            line-height: 1.4;
+            background-image: url(pic/14.PNG);
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
+
+
+        .container {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            position: relative;
+            width: 100%;
+        }
+
+        .container .text-block {
+            display: block;
+            border-radius: 10px;
+            box-sizing: border-box;
+            justify-content: center;
+            background-color: white;
+            color: #474747;
+            font-family: "Roboto";
+            padding-left: 20px;
+            padding-right: 20px;
+            text-align: center;
+            width: 500px;
+            height: 300px;
+            margin-top: 30px;
+            margin-left: 30px;
+            margin-bottom: 30px;
+        }
+
+        .part3 {
+            justify-content: space-evenly;
+            align-self: auto;
+            display: flex;
+            background: url(pic/6.jpg);
+            background-attachment: fixed;
+            background-size: cover;
+            align-items: center;
+            height: 450px;
+            width: 100%;
+        }
+
+        /* .blurbox {
+            justify-content: center;
+            width: 1200px;
+            max-width: 80%;
+            height: 800px;
+            background-color: rgba(255, 255, 255, 0.459);
+            border-radius: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+        } */
+
+        .part4 {
+            justify-content: space-evenly;
+            align-self: auto;
+            display: flex;
+            background: url(pic/15.PNG);
+            background-size: cover;
+            align-items: center;
+            height: 950px;
+            width: 100%;
+        }
+
+        .part4 .container {
+            margin-top: 50px;
+            width: 1000px;
+            max-width: 80%;
+            height: 850px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 10px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            position: relative;
+        }
+
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+        }
+
+        input[type=submit] {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+
+        .col-25 {
+            float: left;
+            width: 55%;
+            margin-top: 6px;
+        }
+
+        .col-75 {
+            float: left;
+            width: 100%;
+            margin-top: 6px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+
+            .col-25,
+            .col-75,
+            input[type=submit] {
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+
+
+
+        blockquote {
+            border-left: 5px solid #c2c2c2;
+            margin-top: 40px;
+            margin-left: 20px;
+            display: inline-flex;
+            padding: 20px;
+        }
+
+        blockquote span {
+            margin-top: -12px;
+            margin-bottom: -7px;
+        }
+
+        .imgPosition1 {
+            display: flex;
+            width: 300px;
+            height: 50px;
+            position: relative;
+            bottom: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .imgPosition2 {
+            display: flex;
+            width: 80px;
+            height: 80px;
+            position: relative;
+            left: 170px;
+            padding: 10px;
+        }
+
+        .name {
+            display: flex;
+            flex-direction: row;
+            margin-left: 20px;
+        }
+
+        .namePosition {
+            font-size: 20px;
+            align-self: center;
+            display: flex;
+            flex-direction: row;
+            margin-left: 20px;
+            margin-bottom: 37px;
+        }
+
+        .icon {
+            height: 60px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .makeBeCircular {
+            border-top-left-radius: 50% 50%;
+            border-top-right-radius: 50% 50%;
+            border-bottom-right-radius: 50% 50%;
+            border-bottom-left-radius: 50% 50%;
+        }
+
+        .part5 {
+            justify-content: space-evenly;
+            align-self: auto;
+            display: flex;
+            background: black;
+            background-size: cover;
+            align-items: center;
+            height: 600px;
+            width: 100%;
+        }
+
+        .navbar {
+            display: flex;
+            overflow: hidden;
+            background-color: rgb(0, 0, 0);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 2;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .button {
+            position: relative;
+            top: 400px;
+            left: 200px;
+            background-color: #1fffb4;
+            border: none;
+            font-size: 28px;
+            color: #FFFFFF;
+            padding: 20px;
+            width: 200px;
+            border-radius: 3.5rem;
+            text-align: center;
+            transition-duration: 0.4s;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .button a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- navbar -->
+    <div class="navbar">
+        <a href="#">Industrious</a>
+
+    </div>
+
+    <!-- part1 -->
+    <div class="part1" id="part1">
+        <div class="text1">
+            <div class="background">
+                <h1>Mother Turtle will be there soon :)</h1>
+            </div>
+            <div class="timer">
+                <div class="background">
+                    <p id="demo"></p>
+
+                    <script>
+                        // Set the date we're counting down to
+                        var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
+
+                        // Update the count down every 1 second
+                        var x = setInterval(function () {
+
+                            // Get today's date and time
+                            var now = new Date().getTime();
+
+                            // Find the distance between now and the count down date
+                            var distance = countDownDate - now;
+
+                            // Time calculations for days, hours, minutes and seconds
+                            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                            // Output the result in an element with id="demo"
+                            document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+                                + minutes + "m " + seconds + "s ";
+
+                            // If the count down is over, write some text 
+                            if (distance < 0) {
+                                clearInterval(x);
+                                document.getElementById("demo").innerHTML = "Just a few weeks and I'm seeing the world ;)";
+                            }
+                        }, 1000);
+                    </script>
+                </div>
+            </div>
+            <button class="button" onclick="location.href='#part4'" type="button">Register</button>
+        </div>
+
+    </div>
+
+    <!-- Pic Slider -->
+    <div class="picslider">
+        <div class="img-slider">
+            <div class="slide active">
+                <img src="pic/1.png" alt="" height="900px">
+            </div>
+            <div class="slide">
+                <img src="pic/2.png" alt="" height="900px">
+            </div>
+            <div class="slide">
+                <img src="pic/3.png" alt="" height="900px">
+            </div>
+            <div class="slide">
+                <img src="pic/4.png" alt="" height="900px">
+            </div>
+            <div class="slide">
+                <img src="pic/5.png" alt="" height="900px">
+            </div>
+            <div class="slide">
+                <img src="pic/6.png" alt="" height="900px">
+            </div>
+            <div class="slide">
+                <img src="pic/7.png" alt="" height="900px">
+            </div>
+            <div class="slide">
+                <img src="pic/8.png" alt="" height="900px">
+            </div>
+
+            <div class="navigation">
+                <div class="btn active"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var slides = document.querySelectorAll('.slide');
+        var btns = document.querySelectorAll('.btn');
+        let currentSlide = 1;
+
+        // Javascript for image slider manual navigation
+        var manualNav = function (manual) {
+            slides.forEach((slide) => {
+                slide.classList.remove('active');
+
+                btns.forEach((btn) => {
+                    btn.classList.remove('active');
+                });
+            });
+
+            slides[manual].classList.add('active');
+            btns[manual].classList.add('active');
+        }
+
+        btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+                manualNav(i);
+                currentSlide = i;
+            });
+        });
+
+        // Javascript for image slider autoplay navigation
+        var repeat = function (activeClass) {
+            let active = document.getElementsByClassName('active');
+            let i = 1;
+
+            var repeater = () => {
+                setTimeout(function () {
+                    [...active].forEach((activeSlide) => {
+                        activeSlide.classList.remove('active');
+                    });
+
+                    slides[i].classList.add('active');
+                    btns[i].classList.add('active');
+                    i++;
+
+                    if (slides.length == i) {
+                        i = 0;
+                    }
+                    if (i >= slides.length) {
+                        return;
+                    }
+                    repeater();
+                }, 10000);
+            }
+            repeater();
+        }
+        repeat();
+    </script>
+    <!-- End of Image Slider -->
+
+
+    <!-- part3 -->
+    <div class="part2">
+        <div class="text2">
+            <h1>SEM TURPIS AMET SEMPER</h1>
+            <h3>In arcu accuman adipiscing accumsan orci ac. Felist id enim aliquet. Accumsan ac integer lobortis
+                commodo ornare
+                <br>aliquet accumsan erat tempus amet porttitor
+            </h3>
+            <div class="container">
+                <div class="text-block">
+                    <img src="" alt="">
+                    <img class="imgPosition2" src="px1.png" alt="">
+                    <h3>FUEGIAT CONSEQUAT</h3>
+                    <p>Nunc lacinia ante nunc ac lobortis
+                        ipsum. Interdum adipiscing gravida
+                        odio porttitor sem non mi integer
+                        non faucibus.</p>
+                </div>
+                <div class="text-block">
+                    <img src="" alt="">
+                    <img class="imgPosition2" src="px2.png" alt="">
+                    <h3>ANTE SEM INTEGER</h3>
+                    <p>Nunc lacinia ante nunc ac lobortis
+                        ipsum. Interdum adipiscing gravida
+                        odio porttitor sem non mi integer
+                        non faucibus.</p>
+                </div>
+                <div class="text-block">
+                    <img src="" alt="">
+                    <img class="imgPosition2" src="px3.png" alt="">
+                    <h3>IPSUM CONSEQUAT</h3>
+                    <p>Nunc lacinia ante nunc ac lobortis
+                        ipsum. Interdum adipiscing gravida
+                        odio porttitor sem non mi integer
+                        non faucibus.</p>
+                </div>
+
+                <div class="text-block">
+                    <img src="" alt="">
+                    <img class="imgPosition2" src="px4.png" alt="">
+                    <h3>INTERDUM GRAVIDA</h3>
+                    <p>Nunc lacinia ante nunc ac lobortis
+                        ipsum. Interdum adipiscing gravida
+                        odio porttitor sem non mi integer
+                        non faucibus.</p>
+                </div>
+
+                <div class="text-block">
+                    <img src="" alt="">
+                    <img class="imgPosition2" src="px5.png" alt="">
+                    <h3>FUEGIAT CONSEQUAT</h3>
+                    <p>Nunc lacinia ante nunc ac lobortis
+                        ipsum. Interdum adipiscing gravida
+                        odio porttitor sem non mi integer
+                        non faucibus.</p>
+                </div>
+
+                <div class="text-block">
+                    <img src="" alt="">
+                    <img class="imgPosition2" src="px6.png" alt="">
+                    <h3>ACCUMSAN VIVERRA</h3>
+                    <p>Nunc lacinia ante nunc ac lobortis
+                        ipsum. Interdum adipiscing gravida
+                        odio porttitor sem non mi integer
+                        non faucibus.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- part4 -->
+    <div class="part4" id="part4">
+            <div class="container">
+                <div class="text3">
+                    <h2 style="color: #474747;">ร่วมลงชื่อสนับสนุนการอนุรักษ์พันธ์เต่ามะเฟือง</h2>
+                </div>
+                <form action="">
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="fname">First Name</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="lname">Last Name</label>
+                        </div>
+                        <div class="col-75">
+                            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="country">Country</label>
+                        </div>
+                        <div class="col-75">
+                            <select id="country" name="country">
+                                <option value="australia">Australia</option>
+                                <option value="canada">Canada</option>
+                                <option value="usa">USA</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-25">
+                            <label for="subject">Subject</label>
+                        </div>
+                        <div class="col-75">
+                            <textarea id="subject" name="subject" placeholder="Write something.."
+                                style="height:200px"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+            </div>
+
+    </div>
+
+    <!-- part5 -->
+    <!-- <div class="part5">
+        <div class="text2">
+            <div class="container">
+                <div class="text-block3">
+                    <h4>ACCUMSAN MON TES VIVERRA</h4>
+                    <p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio
+                        porttitor sem non mi integer non faucibus ornare mi ut ante amet
+                        placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan
+                        varius montes viverra nibh in adipiscing. Lorem ipsum dolor vestibulum
+                        ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis
+                        iaculis volutpat ac adipiscing sed feugiat eu faucibus. Integer ac sed
+                        amet praesent. Nunc lacinia ante nunc ac gravida
+                    </p>
+                </div>
+
+                <div class="text-block4">
+                    <div>
+                        <h4>SUM TURPIS AMET SUMPER</h4>
+                    </div>
+
+                    <div>
+                        <p>Dolor pulvinar sed etiam</p>
+                        <hr width=100% size=1 color=a7a2a2>
+                    </div>
+
+                    <div>
+                        <p>Etiam vel lorem sed amet.</p>
+                        <hr width=100% size=1 color=a7a2a2>
+                    </div>
+
+                    <div>
+                        <p>Felis enim feugiat viverra</p>
+                        <hr width=100% size=1 color=a7a2a2>
+                    </div>
+                    <div>
+                        <p>Dolor pulvinar sed etiam</p>
+                        <hr width=100% size=1 color=a7a2a2>
+                    </div>
+                </div>
+
+                <div class="text-block4">
+                    <div>
+                        <h4>MAGNA SED IPSUM</h4>
+                    </div>
+
+                    <div class="icon">
+                        <img src="twitter.png" height="15px" width="15px">
+                        <div class="namePosition">
+                            <p>Twitter</p>
+                        </div>
+                    </div>
+
+                    <div class="icon">
+                        <img src="facebook.jpg" height="15px" width="15px">
+                        <div class="namePosition">
+                            <p>Facebook</p>
+                        </div>
+                    </div>
+
+                    <div class="icon">
+                        <img src="instagram.png" height="15px" width="15px">
+                        <div class="namePosition">
+                            <p>Instagram</p>
+                        </div>
+                    </div>
+
+                    <div class="icon">
+                        <img src="github.png" height="15px" width="15px">
+                        <div class="namePosition">
+                            <p>Github</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-block5">
+                    <hr width=100% size=1 color=a7a2a2>
+                    <p>© Untitled. Photos Unsplash. Video Cover.</p>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div> -->
+
+
+
+</body>
+
+</html>
