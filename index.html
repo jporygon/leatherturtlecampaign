@@ -32,6 +32,7 @@
         href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&family=Titillium+Web:wght@300;400;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="slider.css">
+    <link rel="shortcut icon" href="turtle.png">
     <style>
         html {
             scroll-behavior: smooth;
@@ -99,16 +100,11 @@
             font-size: 1.5rem;
         }
 
-        .text2 {
-            font-family: "Roboto";
-            text-align: center;
-            color: blue;
-        }
 
         .text4 {
             font-family: "Roboto";
             text-align: center;
-            color: white;
+            color: black;
             width: 100%;
             height: 100%;
         }
@@ -123,13 +119,14 @@
             width: 100%;
             padding-top: 60px;
             padding-bottom: 60px;
-            line-height: 1.4;
-            background: linear-gradient(315deg, #f3f3f5, #bfbddb, #8f88c0, #6255a3, #352384);
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
+            line-height: 1.2;
+            background: linear-gradient(to left, #d8b2c8, #d4a6bd, #d19ab0, #cd8ea3, #c98295, #c67c93, #c37791, #bf7190, #b8719c, #ad73a8, #9f76b3, #8d7abc);
+            background-size: 250% 250%;
+            -webkit-animation: gradientBG 10s ease infinite;
+            animation: gradientBG 10s ease infinite;
         }
 
-        @keyframes gradient {
+        @-webkit-keyframes gradientBG {
             0% {
                 background-position: 0% 50%;
             }
@@ -143,6 +140,24 @@
             }
         }
 
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .part2 h1 {
+            font-family: 'Kanit', sans-serif;
+            font-weight: 600;
+        }
 
 
         .container {
@@ -182,7 +197,7 @@
             width: 80%;
             max-width: 1000px;
             height: 100%;
-            max-height: 1250px;
+            max-height: 1450px;
             background-color: white;
             border-radius: 10px;
             padding: 10px;
@@ -196,10 +211,20 @@
             overflow: hidden;
         }
 
+        .text4 .background {
+            background-color: white;
+            border-radius: 10px;
+            text-align: center;
+            width: 30%;
+            position: relative;
+            margin: auto;
+            overflow: hidden;
+        }
+
         .infos {
             align-self: auto;
             display: flex;
-            background: url(15.PNG);
+            background: url(Pic/15.PNG);
             background-size: cover;
             background-position: center;
             align-items: center;
@@ -234,8 +259,11 @@
         }
 
         label {
-            padding: 12px 12px 12px 0;
+            padding: 34px 12px 12px 0;
             display: inline-block;
+            position: relative;
+            bottom: 40px;
+            right: 40px;
         }
 
         input[type=submit] {
@@ -257,6 +285,7 @@
             float: left;
             width: 55%;
             margin-top: 6px;
+
         }
 
         .col-75 {
@@ -272,22 +301,34 @@
             clear: both;
         }
 
+
+
         .part5 {
             justify-content: space-evenly;
             align-self: auto;
             display: flex;
-            background: url(12.png);
+            background: url(25.png);
             background-size: cover;
             background-position: center;
             align-items: center;
             height: 100%;
-            max-height: 200px;
+            max-height: 400px;
             width: 100%;
             overflow: hidden;
         }
 
         .part5 a {
             text-decoration: none;
+            font-family: 'Kanit', sans-serif;
+            font-weight: 400;
+            color: white;
+        }
+
+        .text2 {
+            font-family: 'Kanit', sans-serif;
+            font-weight: 400;
+            text-align: center;
+            color: white;
         }
 
         .navbar {
@@ -332,9 +373,22 @@
             text-decoration: none;
         }
 
+        .button2 {
+            background-color: #eca644;
+            border: none;
+            color: #FFFFFF;
+            padding: 10px;
+            width: 5%;
+            border-radius: 3.5rem;
+            text-align: center;
+            transition-duration: 0.4s;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
         .summit {
             position: relative;
-            top: 680px;
+            top: 770px;
         }
 
         .modal {
@@ -402,6 +456,8 @@
         }
 
         .partCumming h1 {
+            font-family: "Titillium Web', sans-serif;";
+            font-weight: 600;
             font-size: 2.5vw;
         }
 
@@ -422,6 +478,7 @@
         }
 
         .textCumming .background {
+            font-family: "Titillium Web', sans-serif;";
             color: rgb(0, 0, 0);
             background-color: #eca644;
             border-radius: 0px;
@@ -440,8 +497,8 @@
         }
 
         .part5 img {
-                width: 3%;
-            }
+            width: 3%;
+        }
 
         /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
         /* @media screen and (max-width: 600px) {
@@ -467,9 +524,17 @@
             } */
 
 
-        
+
 
         @media screen and (min-width: 768px) and (max-width: 1224px) {
+
+            .partCumming {
+                background: linear-gradient(80deg, rgba(2, 13, 61, 0.767)20%, rgba(252, 225, 104, 0.336)), url(4c.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: scroll;
+                background-position: center;
+            }
 
             .picslider {
                 height: 100%;
@@ -495,6 +560,10 @@
                 font-size: 1.8vw;
             }
 
+            .button2 {
+                width: 10%;
+            }
+
             .textCumming {
                 text-align: center;
                 margin: auto;
@@ -512,6 +581,10 @@
 
             .text4 {
                 font-size: 2.2vw;
+            }
+
+            .text4 .background {
+                width: 40%;
             }
 
             .col-25 {
@@ -543,20 +616,26 @@
             }
 
             .summit {
-                top: 600px;
+                top: 800px;
             }
 
             .part5 img {
-                width: 10%;
+                width: 3%;
             }
 
         }
 
         @media screen and (min-width: 375px) and (max-width: 767px) {
 
+
             .partCumming {
                 height: 850px;
                 width: 100%;
+                background: linear-gradient(80deg, rgba(2, 13, 61, 0.767)20%, rgba(252, 225, 104, 0.336)), url(4c.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: scroll;
+                background-position: center;
             }
 
             .textCumming {
@@ -566,22 +645,27 @@
                 align-items: center;
             }
 
-            .partCumming h1{
+            .partCumming h1 {
                 font-size: 6vw;
             }
 
-            .partCumming h2{
+            .partCumming h2 {
                 font-size: 4.5vw;
             }
 
-            .textCumming .background{
+            .textCumming .background {
                 width: 100%;
-                
+
             }
+
             .button {
                 top: 300px;
                 width: 40%;
                 font-size: 4vw;
+            }
+
+            .button2 {
+                width: 20%;
             }
 
 
@@ -592,7 +676,8 @@
                 align-items: center;
                 bottom: auto;
             }
-            .timer{
+
+            .timer {
                 margin-top: 10%;
             }
 
@@ -603,6 +688,10 @@
 
             .text3 {
                 font-size: medium;
+            }
+
+            .text4 .background {
+                width: 90%;
             }
 
 
@@ -663,7 +752,7 @@
     <!-- partCumming -->
     <div class="partCumming" id="cumming">
         <div class="textCumming">
-            <h1 class="background" style="font-weight: 600;">Leatherback Turtle Campaign</h1>
+            <h1 class="background">Leatherback Turtle Campaign</h1>
             <h2 style="font-family: 'Kanit', sans-serif; font-weight: 600;">
                 ช่วยอนุรักษ์เต่ามะเฟืองและเฝ้ารอคอยการวางไข่ของแม่เต่ามะเฟืองกันเถอะ!</h2>
             <p style="font-family: 'Kanit', sans-serif; font-weight: 300;">
@@ -726,28 +815,28 @@
     <div class="picslider" id="part2">
         <div class="img-slider">
             <div class="slide active">
-                <img src="23.gif" alt="">
+                <img src="pic/8.png" alt="">
             </div>
             <div class="slide">
-                <img src="2.png" alt="">
+                <img src="pic/2.png" alt="">
             </div>
             <div class="slide">
-                <img src="21.png" alt="">
+                <img src="pic/21.png" alt="">
             </div>
             <div class="slide">
-                <img src="4.png" alt="">
+                <img src="pic/4.png" alt="">
             </div>
             <div class="slide">
-                <img src="22.png" alt="">
+                <img src="pic/22.png" alt="">
             </div>
             <div class="slide">
-                <img src="6.png" alt="">
+                <img src="pic/6.png" alt="">
             </div>
             <div class="slide">
-                <img src="1.png" alt="">
+                <img src="pic/1.png" alt="">
             </div>
             <div class="slide">
-                <img src="8.png" alt="">
+                <img src="pic/23.gif" alt="">
             </div>
 
             <div class="navigation">
@@ -822,37 +911,39 @@
     <!-- part3 -->
     <div class="part2" id="part3">
         <div class="text4">
-            <h1>ข้อควรปฏิบัติเมื่อส่งน้องเต่ากลับบ้าน</h1>
+            <div class="background">
+                <h1>ข้อควรปฏิบัติเมื่อส่งน้องเต่ากลับบ้าน</h1>
+            </div>
             <div class="container">
                 <div class="text-block">
                     <img src="" alt="">
-                    <img class="imgPosition2" src="16.PNG" alt="">
+                    <img class="imgPosition2" src="Pic/16.PNG" alt="">
                     <h2>ห้ามสัมผัสตัวเต่า</h2>
                     <p></p>
                 </div>
                 <div class="text-block">
                     <img src="" alt="">
-                    <img class="imgPosition2" src="17.PNG" alt="">
+                    <img class="imgPosition2" src="Pic/17.PNG" alt="">
                     <h2>ห้ามเข้าเขตหวงห้ามโดยเด็ดขาด</h2>
                     <p></p>
                 </div>
                 <div class="text-block">
                     <img src="" alt="">
-                    <img class="imgPosition2" src="18.PNG" alt="">
+                    <img class="imgPosition2" src="Pic/18.PNG" alt="">
                     <h2>ห้ามส่งเสียงดัง</h2>
                     <p></p>
                 </div>
 
                 <div class="text-block">
                     <img src="" alt="">
-                    <img class="imgPosition2" src="19.PNG" alt="">
+                    <img class="imgPosition2" src="Pic/19.PNG" alt="">
                     <h2>ห้ามกีดขวางกล้อง CCTV</h2>
                     <p></p>
                 </div>
 
                 <div class="text-block">
                     <img src="" alt="">
-                    <img class="imgPosition2" src="20.PNG" alt="">
+                    <img class="imgPosition2" src="Pic/20.PNG" alt="">
                     <h2>ห้ามถ่ายรูป</h2>
                     <p></p>
                 </div>
@@ -868,7 +959,7 @@
 
             <div class="formcontainer">
                 <div class="text3">
-                    <h2 style="color: #474747;">ร่วมลงชื่อสนับสนุนการอนุรักษ์พันธ์เต่ามะเฟือง</h2>
+                    <h2 style="color: #474747;">ร่วมลงชื่อสนับสนุนการอนุรักษ์พันธ์ุเต่ามะเฟือง</h2>
                 </div>
 
                 <form action="" id="form">
@@ -902,6 +993,7 @@
                         </div>
                         <div class="col-75">
                             <select id="country" name="country">
+                                <option value="thailand">Thailand</option>
                                 <option value="australia">Australia</option>
                                 <option value="canada">Canada</option>
                                 <option value="usa">USA</option>
@@ -933,9 +1025,11 @@
         <!-- Modal content -->
         <div class="modal-content">
             <span class="close">&times;</span>
-            <p>ขอบคุณที่ร่วมเป็นส่วนหนึ่งในการพิทักษ์พันธ์ุเต่ามะเฟือง</p>
+            <p id="thanks">เมื่อท่านคลิกปุ่ม 'ยอมรับ' ทาง Leatherback Turtle Campaign ขออนุญาตเก็บข้อมูลของท่านและเผยแพร่โดยทำการปิดข้อมูลส่วนตัวของผู้กรอกข้อมูล ข้อมูลของท่านจะไม่ถูกนำไปใช้ในเชิงพาณิชย์หรือการกระทำอื่นใดที่ขัดต่อตามพ.ร.บ. กฎหมายคุ้มครองผู้บริโภค
+            </p>
+            <button id="thankyou" class="button2">ยอมรับ</button>
         </div>
-
+        
     </div>
 
     <script>
@@ -948,6 +1042,8 @@
         // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];
 
+        var thank = document.getElementById("thankyou")
+
         // When the user clicks the button, open the modal 
         btn.onclick = function () {
             modal.style.display = "block";
@@ -956,13 +1052,19 @@
         // When the user clicks on <span> (x), close the modal
         span.onclick = function () {
             modal.style.display = "none";
+            document.getElementById("thanks").innerText = "เมื่อท่านคลิกปุ่ม 'ยอมรับ' ทาง Leatherback Turtle Campaign ขออนุญาตเก็บข้อมูลของท่านและเผยแพร่โดยทำการปิดข้อมูลส่วนตัวของผู้กรอกข้อมูล ข้อมูลของท่านจะไม่ถูกนำไปใช้ในเชิงพาณิชย์หรือการกระทำอื่นใดที่ขัดต่อตามพ.ร.บ. กฎหมายคุ้มครองผู้บริโภค"
         }
 
         // When the user clicks anywhere outside of the modal, close it
         window.onclick = function (event) {
             if (event.target == modal) {
                 modal.style.display = "none";
+                document.getElementById("thanks").innerText = "เมื่อท่านคลิกปุ่ม 'ยอมรับ' ทาง Leatherback Turtle Campaign ขออนุญาตเก็บข้อมูลของท่านและเผยแพร่โดยทำการปิดข้อมูลส่วนตัวของผู้กรอกข้อมูล ข้อมูลของท่านจะไม่ถูกนำไปใช้ในเชิงพาณิชย์หรือการกระทำอื่นใดที่ขัดต่อตามพ.ร.บ. กฎหมายคุ้มครองผู้บริโภค"
             }
+        }
+
+        thank.onclick = function () {
+            document.getElementById("thanks").innerText = "ขอบคุณที่ร่วมเป็นส่วนหนึ่งในการพิทักษ์พันธ์ุเต่ามะเฟืองกับเรา"
         }
     </script>
 
@@ -972,11 +1074,16 @@
             <div class="container">
                 <div class="text-block3">
                     <h4>ช่องทางการรับข่าวสารเพิ่มเติม</h4>
+                    <a href="https://www.dmcr.go.th/"><img src="23.PNG" alt=""></a>
                     <p><a href="https://www.dmcr.go.th/">กรมทรัพยากรทางทะเลและชายฝั่ง</a></p>
-                    <a href="https://liff.line.me/1645278921-kWRPP32q?openerPlatform=native&openerKey=urlSchema%3Aexternal&accountId=303jwnbf#mst_challenge=Mnvwbp_6B8UURlbbBJvfh-AKWjS1R82L4E8MBB_pEhU"><img src="line.png" alt="" srcset="" id="line"></a>
-                    <a href="https://www.instagram.com/leather____turtle/"><img src="ig.png" alt="" srcset="" id="ig"></a>
-                    <a href="https://www.facebook.com/Leather-Turtle-Campaign-100451722273127/"><img src="fb.png" alt="" srcset="" id="fb"></a>
-                    <hr width=100% size=1 color=a7a2a2>
+                    <a
+                        href="https://liff.line.me/1645278921-kWRPP32q?openerPlatform=native&openerKey=urlSchema%3Aexternal&accountId=303jwnbf#mst_challenge=Mnvwbp_6B8UURlbbBJvfh-AKWjS1R82L4E8MBB_pEhU"><img
+                            src="line.png" alt="" srcset="" id="line"></a>
+                    <a href="https://www.instagram.com/leather____turtle/"><img src="ig.png" alt="" srcset=""
+                            id="ig"></a>
+                    <a href="https://www.facebook.com/Leather-Turtle-Campaign-100451722273127/"><img src="fb.png" alt=""
+                            srcset="" id="fb"></a>
+                    <hr width=40% size=2 color=a7a2a2>
                     <p>© Chunyanut Kerdsiri. Palin Tongkul. Panusorn Pakunpanya.</p>
 
 
